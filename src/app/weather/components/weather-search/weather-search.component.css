@@ -1,0 +1,22 @@
+#custom-search-input{
+    margin-top: 10px;
+}
+input[type=text] {
+    width: 230px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    color: black;
+    margin: 5px 0px;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}

@@ -1,0 +1,26 @@
+<div class="img-area" *ngIf="weather">
+    <div class="img-area-mask"></div>
+    <img class="weather-bg" src="/assets/imgs/{{weather.weather[0].main | lowercase}}.jpg" alt="">
+    <div class="img-area-front">
+        <h5 class="location">{{weather.name}}</h5>
+        <p class="today">{{date | date: 'EEEE'}}, {{date | date: 'yMMMdjms'}}</p>
+        <div class="weather-desc">
+            <span>{{weather.weather[0].description}}</span>
+        </div>
+        <ul class="weather-block-info">
+            <li>
+                <p class="temperature">{{weather.main.temp}}<span class="temperature-feels">max: {{weather.main.temp_max}}</span></p>
+            </li>
+            <li>
+                <img class="weather-icon" src="{{imgUrl}}/{{weather.weather[0].icon}}.png" />
+            </li>
+            <li>
+                <ul class="weather-params">
+                    <li><i class="climacon thermometer medium-high"></i> <span>{{weather.main.pressure}} hpa</span></li>
+                    <li><i class="climacon moon full"></i> <span>{{weather.main.humidity}}% humidity</span></li>
+                    <li><i class="climacon wind"></i> <span>{{weather.wind.speed}}m/s NW</span></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

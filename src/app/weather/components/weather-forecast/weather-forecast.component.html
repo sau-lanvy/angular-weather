@@ -1,0 +1,10 @@
+<ul class="week-forecast" *ngIf="forecast">
+    <li class="{{cast.weather[0].main | lowercase}}" *ngFor="let cast of forecast.list">
+        <div class="inner">
+            <h5 class="week-day">{{cast.dt*1000 | date: 'EEEE'}}</h5>
+            <i class="sun"><img src="{{imgUrl}}{{cast.weather[0].icon}}.png" /></i>
+            <p class="week-day-temperature"> {{cast.temp.day | number}}</p>
+            <p class="week-day-temperature"> {{cast.temp.min | number}}</p>
+        </div>
+    </li>
+</ul>

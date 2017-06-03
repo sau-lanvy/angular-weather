@@ -1,0 +1,17 @@
+<div class="main-wrapper">
+  <div class="main-wrapper-mask"></div>
+  <div class="main-wrapper-blur" style="background-image: url(/assets/imgs/bg.jpg)"></div>
+  <div class="main-wrapper-front">
+    <div class="full-center" *ngIf="weather">
+      <app-weather-search (changed)="search($event)"></app-weather-search>
+      <div class="widget-block">
+        <!-- MAIN AREA -->
+        <app-weather-widget [weather]="weather" [date]="date"></app-weather-widget>
+        <!-- /MAIN AREA -->
+        <!-- WEATHER FORECAST -->
+        <app-weather-forecast [forecast]="forecast"></app-weather-forecast>
+        <!-- /WEATHER FORECAST -->
+      </div>
+    </div>
+  </div>
+</div>
