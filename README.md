@@ -4,6 +4,9 @@ Build a weather app by angular
 ### Install
 > You can clone or download this application and then use the instructions below to run it and/or the tests to get a better sense of how it works.
 
+### Download packages
+> Run ```npm install``` or ```yarn install``` to download all packages for the app.
+
 ### Run app
 > Run ```ng serve``` in command line. And then navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
